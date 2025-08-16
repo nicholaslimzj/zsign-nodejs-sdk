@@ -1,9 +1,17 @@
 {
-  "name": "zohosign_nodejs",
-  "version": "1.0.0",
-  "description": "Zoho Sign's v1 api wrapper SDK in Node JS",
-  "homepage": "https://zoho.com.sign",
+  "name": "@nicholaslimzj/zsign-nodejs-sdk",
+  "version": "1.0.1",
+  "description": "Fixed Zoho Sign v1 API wrapper SDK for Node.js - properly packaged for npm/yarn/pnpm",
+  "homepage": "https://github.com/nicholaslimzj/zsign-nodejs-sdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholaslimzj/zsign-nodejs-sdk.git"
+  },
   "author": {
+    "name": "Nicholas Lim (Fixed version)",
+    "note": "Original by Zoho Sign"
+  },
+  "original-author": {
     "name": "Zoho Sign",
     "homepage": "http://zoho.com/sign",
     "role": "Developer"
@@ -12,15 +20,32 @@
     "email": "support@zohosign.com",
     "docs": "https://www.zoho.com/sign/api/"
   },
-  "require": {
+  "engines": {
     "node": ">=17"
   },
-  "main": "ZOHOSIGN_NODEJS/src/ZohoSign",
+  "main": "src/ZohoSign.js",
+  "exports": {
+    ".": "./src/ZohoSign.js",
+    "./OAuth": "./src/Oauth.js",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "src/**/*",
+    "sampleApp.js",
+    "README.md"
+  ],
   "dependencies": {
     "download": "^8.0.0",
     "express": "^4.18.2",
     "form-data": "^4.0.0",
     "node-fetch": "^2.6.1"
   },
-  "readme": "./README.md"
+  "keywords": [
+    "zoho",
+    "zoho-sign",
+    "e-signature",
+    "digital-signature",
+    "sdk"
+  ],
+  "license": "MIT"
 }
