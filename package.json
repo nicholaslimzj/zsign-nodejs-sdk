@@ -23,16 +23,19 @@
   "engines": {
     "node": ">=17"
   },
-  "main": "src/ZohoSign.js",
+  "main": "index.js",
   "exports": {
-    ".": "./src/ZohoSign.js",
+    ".": "./index.js",
     "./OAuth": "./src/Oauth.js",
+    "./ZohoSign": "./src/ZohoSign.js",
     "./src/*": "./src/*"
   },
   "files": [
+    "index.js",
     "src/**/*",
     "sampleApp.js",
-    "README.md"
+    "README.md",
+    "README-FIXES.md"
   ],
   "dependencies": {
     "download": "^8.0.0",
